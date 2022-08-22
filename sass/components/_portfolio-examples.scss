@@ -1,0 +1,113 @@
+.examples-btn {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+
+    &__item+&__item {
+    margin-left: 8px;
+    }
+}
+
+
+.examples-btn__button {
+    display: inline-block;
+    background-color: $background-secondary;
+    color: $title-text-color;
+    cursor: pointer;
+
+    border-radius: 4px;
+    border: transparent;
+    min-width: 73px;
+    padding: 6px 22px;
+
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.85;
+    text-align: center;
+    letter-spacing: 0.03em;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, :focus {
+        background-color: $accent-color;
+            color: $white-color;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+/* examples of work */
+
+.examples__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.examples img {
+    margin-bottom: 20px;
+}
+
+.examples__title {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.examples__paragraph {
+    color: $primary-text-color;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+.examples__list .list {
+    margin-bottom: 30px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.examples__list img {
+    margin-bottom: 0;
+}
+
+.examples-card {
+    border: 1px solid #EEEEEE;
+    border-top: 0;
+    padding: 20px 24px;
+}
+
+
+.examples__item:hover,
+.examples__item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.examples__img {
+    position: relative;
+    overflow: hidden;
+}
+
+.examples__overlay {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 370px;
+    height: 294px;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translatey(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: $white-color;
+    padding: 63px 24px;
+}
+
+.examples__item:hover .examples__overlay {
+    top: 1px;
+    transform: translate(0);
+}
