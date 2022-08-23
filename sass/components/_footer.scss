@@ -92,9 +92,6 @@
 }
 
 .footer-social {
-    // width: 206px;
-    // height: 44px;
-    // margin-left: 70px;
 
     &__list {
         display: flex;
@@ -109,8 +106,6 @@
             width: 206px;
         }
     }
-
-    
 }
 
 .footer-social__item {
@@ -130,6 +125,7 @@
     text-transform: uppercase;
     color: $white-color;
     margin-bottom: 20px;
+
     @media screen and (min-width: 768px) {
         margin-left: 195px;
     }
@@ -169,6 +165,7 @@
     @media screen and (min-width: 1200px) {
         margin-left: 70px;
         margin-right: 0;
+        margin-top: 0;
     }
 
     &__title {
@@ -197,6 +194,7 @@
 
     @media screen and (min-width: 1200px) {
         width: 358px;
+        margin-bottom: 0;
     }
 }
 

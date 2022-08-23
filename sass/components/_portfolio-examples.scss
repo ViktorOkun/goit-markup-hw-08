@@ -1,16 +1,28 @@
 .examples-btn {
+    max-width: 326px;
     margin-bottom: 50px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
 
     &__item+&__item {
-    margin-left: 8px;
+        margin-left: 8px;
+        margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 1200px;
+        flex-wrap: nowrap;
+        justify-content: center;
     }
 }
 
+//     &__item+&__item {
+//     margin-left: 8px;
+//     }
+// }
+
 
 .examples-btn__button {
-    display: inline-block;
     background-color: $background-secondary;
     color: $title-text-color;
     cursor: pointer;
@@ -33,19 +45,47 @@
             color: $white-color;
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     }
+        @media screen and (min-width: 768px) {
+
+        }
 }
 
 /* examples of work */
 
 .examples__list {
+    @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin: -15px;
+    }
+}
+
+.examples__item {
+    max-width: 450px;
+
+    @media screen and(min-width:768px) {
+            width: calc((100% - 60px) / 2);
+            margin: 15px;
+        }
+
+                    	@media screen and (min-width: 1200px) {
+                    	    margin: 0px 30px 30px 0px;
+                    	    width: calc((100% - 60px)/3);
+            
+                    	    &:nth-child(3n) {
+                    	        margin-right: 0;
+                    	    }
+            
+                    	    &:nth-last-child(-n + 3) {
+                    	        margin-bottom: 0;
+                    	    }
+                    	}
 }
 
 
 .examples img {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .examples__title {
