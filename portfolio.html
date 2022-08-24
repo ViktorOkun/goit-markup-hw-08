@@ -15,39 +15,62 @@
 <body>
 
     <header class="header-border">
-        <div class="container">
+    
+        <div class="container ">
             <nav class="main-nav">
+    
                 <a href="./index.html" class="logo link"> <span class="logo-web">Web</span>Studio </a>
-                <ul class="site-nav">
-                    <li class="site-nav__list list"><a href="./index.html" class="site-nav__link link">Студія</a>
-                    </li>
-                    <li class="site-nav__list list"><a href="./portfolio.html" class="site-nav__link link current">Портфоліо</a>
-                    </li>
-                    <li class="site-nav__list list"><a href="#Контакты" class="site-nav__link link">Контакти</a></li>
-                </ul>
     
-                <ul class="site-contacts">
-                    <li class="site-contacts__list list">
-                        <a href="mailto:info@devstudio.com" class="site-contacts__link link">
-                            <svg class="site-contacts__icon" width="12" height="16">
-                                <use href="./images/icons.svg#icon-mail"></use>
-                            </svg>
-                            info@devstudio.com
-                        </a>
-                    </li>
     
-                    <li class="site-contacts__list list">
-                        <a href="tel:+380961111111" class="site-contacts__link link">
-                            <svg class="site-contacts__icon" width="16" height="13">
-                                <use href="./images/icons.svg#icon-smartphone"></use>
-                            </svg>
-                            +380961111111
-                        </a>
-                    </li>
     
-                </ul>
+                <div class="menu-burger" data-menu>
+                    <ul class="site-nav">
+                        <li class="site-nav__list list"><a href="./index.html"
+                                class="site-nav__link link">Студія</a></li>
+                        <li class="site-nav__list list"><a href="./portfolio.html" class="site-nav__link link current">Портфоліо</a>
+                        </li>
+                        <li class="site-nav__list list"><a href="#Контакты" class="site-nav__link link">Контакти</a></li>
+                    </ul>
+    
+                    <ul class="site-contacts">
+                        <li class="site-contacts__list list">
+                            <a href="mailto:info@devstudio.com" class="site-contacts__link link">
+                                <svg class="site-contacts__icon" width="12" height="16">
+                                    <use href="./images/icons.svg#icon-mail"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        </li>
+    
+                        <li class="site-contacts__list list">
+                            <a href="tel:+380961111111" class="site-contacts__link link">
+                                <svg class="site-contacts__icon" width="16" height="13">
+                                    <use href="./images/icons.svg#icon-smartphone"></use>
+                                </svg>
+                                +380961111111
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="burger-social">
+                        <li class="burger-social__list list"><a class="link" href="">Instagram</a></li>
+                        <li class="burger-social__list list"><a class="link" href="">Twitter</a></li>
+                        <li class="burger-social__list list"><a class="link" href="">Facebook</a></li>
+                        <li class="burger-social__list list"><a class="link" href="">LinkedIn</a></li>
+                    </ul>
+    
+                </div>
+    
             </nav>
         </div>
+    
+        <button type="button" class="btn-burger is-open" data-menu-button aria-expanded="falce">
+            <svg width="24" height="16">
+                <use class="icon-close" href="./images/icons.svg#icon-open"></use>
+                <use class="icon-open" href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+    
     </header>
 
     <main>
@@ -68,8 +91,23 @@
                     <li class="examples__item list">
                         <a href="" class="link">
                             <div class="examples__img">
-                                <img src="./images/examples-work/img.jpg"
-                                alt="Главная страница созданого сайта" width="370">
+
+                            <picture>
+                                <source srcset="
+                                                ./images/desktop/tehno.jpg    1x,
+                                                ./images/desktop/tehno@2x.jpg 2x
+                                              " media="(min-width:1200px)" />
+                                <source srcset="
+                                                ./images/tablet/tehno-tab.jpg    1x,
+                                                ./images/tablet/tehno-tab@2x.jpg 2x
+                                              " media="(min-width:768px)" />
+                                <source srcset="
+                                                ./images/mobile/tehno-mob.jpg    1x,
+                                                ./images/mobile/tehno-mob@2x.jpg 2x
+                                              " media="(min-width:320px)" />
+                                <img class="team__photo pictures" src="./images/examples-work/img.jpg" alt="Головна сторінка сайту" />
+                            </picture>
+                                
                                 <div class="examples__overlay">
                                     <p>
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -88,8 +126,23 @@
                     <li class="examples__item list">
                         <a href="" class="link">
                             <div class="examples__img">
-                                <img src="./images/examples-work/img(1).jpg"
-                                alt="Постер на котором два игрока играюь баскетбол" width="370">
+
+                            <picture>
+                                <source srcset="
+                                    ./images/desktop/orlean.jpg    1x,
+                                    ./images/desktop/orlean@2x.jpg 2x
+                                    "media="(min-width:1200px)" />
+                                <source srcset="
+                                    ./images/tablet/orlean-tab.jpg    1x,
+                                    ./images/tablet/orlean-tab@2x.jpg 2x
+                                    "media="(min-width:768px)" />
+                                <source srcset="
+                                    ./images/mobile/orlean-mob.jpg    1x,
+                                    ./images/mobile/orlean-mob@2x.jpg 2x
+                                    "media="(min-width:320px)" />
+                                <img class="team__photo pictures" src="./images/examples-work/img(1).jpg" alt="Головна сторінка сайту" />
+                            </picture>
+
                                 <div class="examples__overlay">
                                     <p>
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -108,8 +161,21 @@
                     <li class="examples__item list">
                         <a href="" class="link">
                             <div class="examples__img">
-                            <img src="./images/examples-work/img(2).jpg"
-                            alt="Логотип приложения для ресторана" width="370">
+                            <picture>
+                                <source srcset="
+                                    ./images/desktop/seafood.jpg    1x,
+                                    ./images/desktop/seafood@2x.jpg 2x
+                                    "media="(min-width:1200px)" />
+                                <source srcset="
+                                    ./images/tablet/seafood-tab.jpg    1x,
+                                    ./images/tablet/seafood-tab@2x.jpg 2x
+                                    "media="(min-width:768px)" />
+                                <source srcset="
+                                    ./images/mobile/seafood-mob.jpg    1x,
+                                    ./images/mobile/seafood-mob@2x.jpg 2x
+                                    "media="(min-width:320px)" />
+                                <img class="team__photo pictures" src="./images/examples-work/img(2).jpg" alt="Головна сторінка сайту" />
+                            </picture>
                             
                                 <div class="examples__overlay">
                                     <p>
@@ -129,7 +195,21 @@
                     <li class="examples__item list">
                         <a href="" class="link">
                             <div class="examples__img">
-                            <img src="./images/examples-work/img(3).jpg" alt="Наушники" width="370">
+                            <picture>
+                                <source srcset="
+                                    ./images/desktop/prime.jpg 1x,
+                                    ./images/desktop/prime@2x.jpg 2x
+                                    "media="(min-width:1200px)" />
+                                <source srcset="
+                                    ./images/tablet/prime-tab.jpg 1x,
+                                    ./images/tablet/prime-tab@2x.jpg 2x
+                                    "media="(min-width:768px)" />
+                                <source srcset="
+                                    ./images/mobile/prime-mob.jpg 1x,
+                                    ./images/mobile/prime-mob@2x.jpg 2x
+                                    "media="(min-width:320px)" />
+                                <img class="team__photo pictures" src="./images/examples-work/img(3).jpg"/>
+                            </picture>
                             
                                 <div class="examples__overlay">
                                     <p>
@@ -149,7 +229,21 @@
                     <li class="examples__item list">
                         <a href="" class="link">
                             <div class="examples__img">
-                            <img src="./images/examples-work/img(4).jpg" alt="Картонные коробки" width="370">
+                            <picture>
+                                <source srcset="
+                                    ./images/desktop/boxes.jpg 1x,
+                                    ./images/desktop/boxes@2x.jpg 2x
+                                    "media="(min-width:1200px)" />
+                                <source srcset="
+                                    ./images/tablet/boxes-tab.jpg 1x,
+                                    ./images/tablet/boxes-tab@2x.jpg 2x
+                                    "media="(min-width:768px)" />
+                                <source srcset="
+                                    ./images/mobile/boxes-mob.jpg 1x,
+                                    ./images/mobile/boxes-mob@2x.jpg 2x
+                                    "media="(min-width:320px)" />
+                                <img class="team__photo pictures" src="./images/examples-work/img(4).jpg"/>
+                            </picture>
                             
                                 <div class="examples__overlay">
                                     <p>
@@ -169,7 +263,21 @@
                     <li class="examples__item list">
                         <a href="" class="link">
                             <div class="examples__img">
-                            <img src="./images/examples-work/img(5).jpg" alt="Экран монитора" width="370">
+                            <picture>
+                                <source srcset="
+                                    ./images/desktop/inspiration.jpg 1x,
+                                    ./images/desktop/inspiration@2x.jpg 2x
+                                    "media="(min-width:1200px)" />
+                                <source srcset="
+                                    ./images/tablet/inspiration-tab.jpg 1x,
+                                    ./images/tablet/inspiration-tab@2x.jpg 2x
+                                    "media="(min-width:768px)" />
+                                <source srcset="
+                                    ./images/mobile/inspiration-mob.jpg 1x,
+                                    ./images/mobile/inspiration-mob@2x.jpg 2x
+                                    "media="(min-width:320px)" />
+                                <img class="team__photo pictures" src="./images/examples-work/img(5).jpg"/>
+                            </picture>
                             
                                 <div class="examples__overlay">
                                     <p>
@@ -189,7 +297,21 @@
                     <li class="examples__item list">
                         <a href="" class="link">
                             <div class="examples__img">
-                            <img src="./images/examples-work/img(6).jpg" alt="Глянцевый журнал" width="370">
+                            <picture>
+                                <source srcset="
+                                    ./images/desktop/limited.jpg 1x,
+                                    ./images/desktop/limited@2x.jpg 2x
+                                    "media="(min-width:1200px)" />
+                                <source srcset="
+                                    ./images/tablet/limited-tab.jpg 1x,
+                                    ./images/tablet/limited-tab@2x.jpg 2x
+                                    "media="(min-width:768px)" />
+                                <source srcset="
+                                    ./images/mobile/limited-mob.jpg 1x,
+                                    ./images/mobile/limited-mob@2x.jpg 2x
+                                    "media="(min-width:320px)" />
+                                <img class="team__photo pictures" src="./images/examples-work/img(6).jpg"/>
+                            </picture>
                             
                                 <div class="examples__overlay">
                                     <p>
@@ -209,7 +331,21 @@
                     <li class="examples__item list">
                         <a href="" class="link">
                             <div class="examples__img">
-                            <img src="./images/examples-work/img(7).jpg" alt="Глянцевый журнал" width="370">
+                            <picture>
+                                <source srcset="
+                                    ./images/desktop/lab.jpg 1x,
+                                    ./images/desktop/lab@2x.jpg 2x
+                                    "media="(min-width:1200px)" />
+                                <source srcset="
+                                    ./images/tablet/lab-tab.jpg 1x,
+                                    ./images/tablet/lab-tab@2x.jpg 2x
+                                    "media="(min-width:768px)" />
+                                <source srcset="
+                                    ./images/mobile/lab-mob.jpg 1x,
+                                    ./images/mobile/lab-mob@2x.jpg 2x
+                                    "media="(min-width:320px)" />
+                                <img class="team__photo pictures" src="./images/examples-work/img(7).jpg"/>
+                            </picture>
 
                             <div class="examples__overlay">
                                     <p>
@@ -228,7 +364,21 @@
                     <li class="examples__item list">
                         <a href="" class="link">
                             <div class="examples__img">
-                            <img src="./images/examples-work/img(8).jpg" alt="Глянцевый журнал" width="370">
+                            <picture>
+                                <source srcset="
+                                    ./images/desktop/growing.jpg 1x,
+                                    ./images/desktop/growing@2x.jpg 2x
+                                    "media="(min-width:1200px)" />
+                                <source srcset="
+                                    ./images/tablet/growing-tab.jpg 1x,
+                                    ./images/tablet/growing-tab@2x.jpg 2x
+                                    "media="(min-width:768px)" />
+                                <source srcset="
+                                    ./images/mobile/growing-mob.jpg 1x,
+                                    ./images/mobile/growing-mob@2x.jpg 2x
+                                    "media="(min-width:320px)" />
+                                <img class="team__photo pictures" src="./images/examples-work/img(8).jpg"/>
+                            </picture>
                             
                                 <div class="examples__overlay">
                                     <p>
