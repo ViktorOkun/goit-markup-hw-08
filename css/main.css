@@ -67,10 +67,12 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
+  height: 60px;
 }
 
 .header-border {
   border-bottom: 1px solid #ECECEC;
+  position: relative;
 }
 
 .logo {
@@ -88,6 +90,139 @@ img {
   color: #2196F3;
 }
 
+.site-nav {
+  margin-bottom: 250px;
+}
+
+.site-nav__link {
+  margin-left: 40px;
+  display: block;
+  margin-bottom: 32px;
+  color: #212121;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.site-nav__link:hover, .site-nav__link:focus {
+  color: #2196F3;
+}
+.site-nav__link.current {
+  color: #2196F3;
+}
+
+.site-contacts {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 64px;
+}
+
+.site-contacts__link {
+  display: flex;
+  align-self: center;
+  margin-bottom: 32px;
+  color: #757575;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.site-contacts__link:hover, .site-contacts__link:focus {
+  color: #2196F3;
+}
+
+.site-contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+@media screen and (max-width: 768px) {
+  .site-contacts__icon {
+    display: none;
+  }
+}
+
+.menu-burger {
+  background-color: #FFFFFF;
+}
+.menu-burger.is-open {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .menu-burger {
+    height: 748px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.btn-burger {
+  position: absolute;
+  top: 24px;
+  right: 10px;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .btn-burger {
+    display: none;
+  }
+}
+
+.icon-close {
+  display: none;
+}
+
+.btn-burger.is-open .icon-open {
+  display: none;
+}
+
+.btn-burger.is-open .icon-close {
+  display: block;
+}
+
+.burger-social {
+  display: flex;
+  margin-left: 40px;
+}
+@media screen and (min-width: 768px) {
+  .burger-social {
+    display: none;
+  }
+}
+
+.burger-social__list {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  margin-right: 10px;
+  margin-left: 30px;
+}
+
+.burger-social .link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2196F3;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-burger {
+    display: none;
+  }
+}
 .hero {
   text-align: center;
   padding-top: 118px;
@@ -108,6 +243,11 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+  }
 }
 .hero__button {
   background-color: #2196F3;
@@ -717,17 +857,23 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: #FFFFFF;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__button {
   position: absolute;
   top: 8px;
-  left: 490px;
+  left: 410px;
   width: 30px;
   height: 30px;
   border-radius: 50px;
@@ -735,6 +881,11 @@ img {
   background-color: #FFFFFF;
   cursor: pointer;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .modal__button {
+    left: 490px;
+  }
 }
 .modal__button:hover {
   fill: #2196F3;
@@ -865,7 +1016,7 @@ img {
 .modal-group__buttom {
   position: absolute;
   bottom: 40px;
-  left: 165px;
+  left: 125px;
   width: 200px;
   height: 50px;
   padding: 10px 52px;
@@ -880,6 +1031,11 @@ img {
   letter-spacing: 0.06em;
   color: #FFFFFF;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .modal-group__buttom {
+    left: 165px;
+  }
 }
 .modal-group__buttom:hover, .modal-group__buttom :focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
